@@ -74,7 +74,7 @@ export default function Timeline() {
                 >
                   <div className="order-1 w-5/12 md:text-7xl xl:text-8xl">
                     <h2 className="mb-2 text-base font-bold text-purple-700">{item.title}</h2>
-                    <p className="mb-3 text-2xl font-medium text-black">{item.header}</p>
+                    <p className="mb-3 text-2xl font-medium text-white">{item.header}</p>
                     <p className="text-base text-gray-500">{item.description}</p>
                     <Link
                       href={item.href}
@@ -106,7 +106,7 @@ export default function Timeline() {
                 >
                   <div className="order-1 w-full md:text-7xl xl:text-8xl">
                     <h2 className="mb-2 text-base font-semibold text-primary-400">{item.title}</h2>
-                    <p className="mb-3 text-2xl font-medium text-black">{item.header}</p>
+                    <p className="mb-3 text-2xl font-medium text-white">{item.header}</p>
                     <p className="text-base text-gray-500">{item.description}</p>
                     <br />
                     <Link

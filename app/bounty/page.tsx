@@ -22,7 +22,7 @@ export default function Page() {
           className="space-y-2 pb-8 pt-6 md:space-y-5"
         >
           <div style={{ justifyContent: 'center', display: 'flex', alignItems: 'center' }}>
-            <section className="body-font text-black">
+            <section className="body-font text-white">
               <div className="container mx-auto px-1 pt-20 lg:px-1 lg:py-1">
                 <div className="mb-2 flex w-full flex-col text-left md:text-center">
                   <div

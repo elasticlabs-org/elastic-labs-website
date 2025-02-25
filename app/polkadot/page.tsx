@@ -1,253 +1,50 @@
-// import EventImageGallery from '@/components/EventImageGallery'
 import React from 'react'
-import FeaturedSectionContainer from '@/components/FeaturedSectionContainer'
-import MembersShowcaseList from '@/components/MembersShowcaseList'
-import { TwitterPostsMarquee, TwitterPostsShowcase } from '@/components/TwitterPostsShowcase'
-import LearnMoreSection from '@/components/LearnMoreSection'
-import Timeline from '@/components/Timeline'
-import Countup from '@/components/Countup'
-import { communityTwitterFeedback, twitterPosts } from 'app/constants'
+import { AnimatedBackground } from '@/components/AnimatedBackground'
 
 export default function PolkadotMainPage() {
   return (
     <React.Fragment>
-      <section className="body-font text-black">
-        <div className="container mx-auto px-1 pt-20 lg:px-1 lg:py-1">
-          <div className="mb-2 flex w-full flex-col text-left md:text-center">
-            <img
-              className="hidden md:flex"
-              src="/static/images/polkadot/Community_Banner.webp"
-              style={{
-                marginBottom: 50,
-                borderRadius: '30px',
-                width: '100%',
-                height: 400,
-                objectFit: 'cover',
-              }}
-            />
-            <img
-              className="flex md:hidden"
-              src="/static/images/polkadot/jumbotron/OG_new_branding.webp"
-              style={{
-                marginBottom: 50,
-                borderRadius: '15px',
-                width: '100%',
-                height: 150,
-                objectFit: 'contain',
-              }}
-            />
-            <h1 className="mb-2 text-3xl font-bold tracking-tighter md:text-4xl lg:text-4xl">
-              An open community driven <br className="hidden lg:block"></br> by{' '}
-              <span style={{ color: '#E6007A' }}>Web 3.0</span> elevating builders on
-              <span style={{ color: '#E6007A' }}> Polkadot</span>
-            </h1>
-            <br></br>
-            <p className="mx-auto text-xl font-normal leading-relaxed text-gray-600 dark:text-gray-300 lg:w-2/3">
-              <span className="font-bold text-primary-500">OpenGuild</span> is a community of Web
-              3.0 builders who contribute to open-source projects, learn, and connect enthusiasts
-              together with a focus on expanding the Polkadot ecosystem.{' '}
-            </p>
+      <AnimatedBackground />
+      <section className="body-font min-h-80vh text-white">
+        <div className="container mx-auto px-0 pt-20 md:px-5 lg:px-1 lg:py-5">
+          <div className="flex flex-col items-center justify-between gap-[30px] md:flex-row">
+            <div className="mb-2 w-full text-left md:max-w-[900px]">
+              <h1 className="mb-2 text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
+                Grow Your On-chain Ecosystem{' '}
+              </h1>
+              <h1 className="mb-2 text-xl font-normal tracking-tighter text-gray-300 md:text-2xl lg:text-2xl">
+                Marketing, Developer Activation, & Venture Building for the Future of
+                Decentralization
+              </h1>
+              <br></br>
+              <p className="text-lg font-normal leading-relaxed text-gray-600 text-white dark:text-gray-300">
+                We help{' '}
+                <span className="font-bold text-primary-500">
+                  blockchain ecosystems, startups, and enterprises
+                </span>{' '}
+                scale their Web3 presence through strategic marketing, developer activation, and
+                innovative dApps development.
+              </p>
+              <div className="mt-10">
+                <a
+                  href="https://linktr.ee/OpenGuild"
+                  style={{ maxWidth: 450 }}
+                  className="mx-auto my-5 rounded-lg bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 px-10 py-2.5 text-center text-xl font-medium text-white shadow-lg shadow-purple-500/50 hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-purple-300 dark:shadow-lg dark:shadow-purple-800/80 dark:focus:ring-purple-800"
+                >
+                  <span>Get our services</span>
+                </a>
+                <div className="mt-10 italic text-gray-300">
+                  Our established market: Southeast Asia and Broader Asia market.
+                </div>
+              </div>
+            </div>
+            <div>
+              <img src="/static/images/elastic/3d-graphic-1.png" width={550} />
+            </div>
           </div>
         </div>
       </section>
       <br />
-      <div className="mb-3 flex items-center justify-center">
-        <a
-          href="https://linktr.ee/OpenGuild"
-          style={{ maxWidth: 450 }}
-          className="flex w-full items-center rounded-lg border border-gray-900 bg-gray-800 px-6 py-2 text-sm font-medium text-white shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 md:w-fit"
-        >
-          <span>📚 Discover OpenGuild Community</span>
-        </a>
-      </div>
-      {/* <div className="mt-3 flex items-center justify-center">
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-          <div className="mx-auto my-2 w-full lg:mx-1 lg:w-fit">
-            <a
-              href="https://github.com/openguild-labs"
-              className="flex items-center rounded-lg border border-gray-900 bg-gray-800 px-6 py-2 text-sm font-medium text-white shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2"
-            >
-              <img width={20} style={{ marginRight: 15 }} src="/static/images/github-icon.png" />
-              <span>Visit OpenGuild Labs</span>
-            </a>
-          </div>
-          <div className="mx-auto my-2 w-full lg:mx-1 lg:w-fit">
-            <a
-              href="https://www.facebook.com/search/groups/?q=OpenGuild"
-              className="flex items-center rounded-lg border border-gray-900 bg-gray-800 px-6 py-2 text-sm font-medium text-white shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2"
-            >
-              <svg
-                fill="#0e76a8"
-                height="15px"
-                width="15px"
-                version="1.1"
-                id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 310 310"
-                stroke="#0e76a8"
-                style={{ marginRight: 10 }}
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  {' '}
-                  <g id="XMLID_801_">
-                    {' '}
-                    <path
-                      id="XMLID_802_"
-                      d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73 C77.16,101.969,74.922,99.73,72.16,99.73z"
-                    ></path>{' '}
-                    <path
-                      id="XMLID_803_"
-                      d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4 c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"
-                    ></path>{' '}
-                    <path
-                      id="XMLID_804_"
-                      d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599 c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319 c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995 C310,145.43,300.549,94.761,230.454,94.761z"
-                    ></path>{' '}
-                  </g>{' '}
-                </g>
-              </svg>
-              <span>OpenGuild Linkedin</span>
-            </a>
-          </div>
-          <div className="mx-auto my-2 w-full lg:mx-1 lg:w-fit">
-            <a
-              href="https://x.com/openguildwtf/"
-              className="flex items-center rounded-lg border border-gray-900 bg-gray-800 px-6 py-2 text-sm font-medium text-white shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2"
-            >
-              <img width={20} style={{ marginRight: 15 }} src="/static/images/x-icon.png" />
-              <span>Follow us on X</span>
-            </a>
-          </div>
-        </div>
-      </div> */}
-      <br />
-      <h1 className="text-md mb-5 text-center font-bold">
-        Connect with more than <Countup end={3500} duration={5} /> builders in 🇻🇳🇵🇭🇲🇾🇹🇭🇸🇬
-      </h1>
-      <MembersShowcaseList />
-      <br />
-      <LearnMoreSection />
-      <br />
-      <div>
-        <div className="space-y-2 pb-8 md:space-y-5">
-          <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-3xl md:leading-14">
-            Why should you join us?
-          </h1>
-        </div>
-        <div className="flex-wrap lg:flex lg:justify-evenly">
-          {[
-            {
-              icon: '🫂',
-              number: (
-                <div>
-                  + <Countup end={3500} duration={5} />
-                </div>
-              ),
-              title: 'Community Members',
-              description: 'Total number of members across platforms.',
-            },
-            {
-              icon: '💰',
-              number: (
-                <div>
-                  + <Countup end={20000} duration={5} />$
-                </div>
-              ),
-              title: 'Total Bounty Pool',
-              description: 'Icentives for community members to build and learn to earn.',
-            },
-            {
-              icon: '🎓',
-              number: <Countup end={20} duration={5} />,
-              title: 'PBA Participants',
-              description: 'Community members that finished past Polkadot Blockchain Academy.',
-            },
-            {
-              icon: '🎮',
-              number: (
-                <div>
-                  + <Countup end={70} duration={5} />
-                </div>
-              ),
-              title: 'Community Calls & Workshops',
-              description: 'Online & offline sections for knowledge sharing about Polkadot.',
-            },
-            {
-              icon: '🎉',
-              number: (
-                <div>
-                  + <Countup end={50000} duration={5} />
-                  XP
-                </div>
-              ),
-              title: 'XP Distributed',
-              description: 'Experience point is a unit of activeness in the community.',
-            },
-            {
-              icon: '🧱',
-              number: (
-                <div>
-                  + <Countup end={50} duration={5} />
-                </div>
-              ),
-              title: 'Projects & courses',
-              description: 'Open-source projects and educational materials built by us.',
-            },
-          ].map((metric) => (
-            <div
-              key={metric.title}
-              style={{
-                borderRadius: 20,
-              }}
-              className="mx-3 my-3 w-full max-w-lg overflow-hidden bg-white px-5 py-4 shadow-lg"
-            >
-              <h2 className="flex" style={{ alignItems: 'center' }}>
-                <div className="mb-6 mr-5 flex h-14 w-14 rotate-3 items-center justify-center rounded bg-white text-4xl shadow-md">
-                  {metric.icon}
-                </div>
-                <span className="mb-2 flex text-3xl font-extrabold text-slate-900">
-                  {metric.number}
-                </span>
-              </h2>
-              <span className="mb-2 inline-flex bg-gradient-to-r from-indigo-500 to-indigo-300 bg-clip-text font-semibold text-transparent">
-                {metric.title}
-              </span>
-              <p className="text-sm text-slate-500">{metric.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-      <br />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-center text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-3xl md:leading-14">
-            Feedback from our members
-          </h1>
-          <TwitterPostsMarquee tweetIds={communityTwitterFeedback} />
-        </div>
-      </div>
-      <br />
-      <div className="mt-5">
-        <div className="space-y-2 pb-8 md:space-y-5">
-          <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-3xl md:leading-14">
-            Community Features
-          </h1>
-        </div>
-      </div>
-      <Timeline />
-      <br />
-      <FeaturedSectionContainer />
-      {/* <EventImageCarousel /> */}
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-center text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-3xl md:leading-14">
-            Shaping the Next Generation of the Internet!
-          </h1>
-          <TwitterPostsShowcase seeMoreEnabled={true} tweetIds={twitterPosts} />
-        </div>
-      </div>
     </React.Fragment>
   )
 }

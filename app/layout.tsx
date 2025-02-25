@@ -82,7 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta property="og:image" content="<generated>" />
       <body
         suppressHydrationWarning={true}
-        className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white"
+        className="bg-black text-white antialiased dark:bg-gray-950 dark:text-white"
       >
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />

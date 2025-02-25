@@ -9,7 +9,7 @@ export default function PolkadotSubstrateMainPage() {
   const posts = allCoreContent(sortedPosts)
   return (
     <div>
-      <section className="body-font text-black">
+      <section className="body-font text-white">
         <div className="container mx-auto px-5 pt-32 lg:px-4 lg:py-4">
           <div className="mb-2 flex w-full flex-col text-left md:text-center">
             <div

@@ -17,7 +17,7 @@ export default function PolkadotMainPage() {
   const posts = allCoreContent(sortedPosts)
   return (
     <>
-      <section className="body-font text-black">
+      <section className="body-font text-white">
         <div className="container mx-auto px-5 pt-32 lg:px-4 lg:py-4">
           <div className="mb-2 flex w-full flex-col text-left md:text-center">
             <div
@@ -29,7 +29,7 @@ export default function PolkadotMainPage() {
                 backgroundSize: 'cover',
               }}
             />
-            <h1 className="mb-2 text-3xl font-bold tracking-tighter text-black md:text-7xl lg:text-5xl">
+            <h1 className="mb-2 text-3xl font-bold tracking-tighter text-white md:text-7xl lg:text-5xl">
               <span>Nghiên cứu công nghệ cốt lõi </span>
               <br className="hidden lg:block"></br>
               của mạng blockchain Polkadot

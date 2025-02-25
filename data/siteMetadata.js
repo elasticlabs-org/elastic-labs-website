@@ -1,11 +1,12 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'OpenGuild Community',
-  author: 'OpenGuild Labs',
-  headerTitle: 'OpenGuild',
-  description: 'An open community driven by Web 3.0 builders elevating Polkadot',
+  title: 'Elastic Labs',
+  author: 'Elastic Labs',
+  headerTitle: 'Elastic Labs',
+  description:
+    'Marketing, Developer Activation, & Venture Building  for the Future of Decentralization',
   expandedDescription:
-    'OpenGuild is a community of Web 3.0 builders who contribute to open-source projects, learn, and connect enthusiasts together with a focus on expanding the Polkadot ecosystem . Starting with the goal of fostering development within the vibrant community of developers and builders in Southeast Asia.',
+    'Elastic Labs helps blockchain ecosystems, startups, and enterprises scale their Web3 presence through strategic marketing, developer activation, and innovative dApps development.',
   blogSectionDescription:
     'Read our latest research & blog posts to learn more about what are we building',
   focusTopics: [

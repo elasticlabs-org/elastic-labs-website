@@ -67,7 +67,7 @@ export const EmbeddedVideoListContainer = ({
       </div>
       {modules.length - limit > 0 && (
         <button
-          className="bg-gradient-to-rpx-5 mb-2 me-2 w-full rounded-lg py-1 py-3 text-center text-sm font-medium text-black shadow-lg focus:ring-4 dark:shadow-lg"
+          className="bg-gradient-to-rpx-5 mb-2 me-2 w-full rounded-lg py-1 py-3 text-center text-sm font-medium text-white shadow-lg focus:ring-4 dark:shadow-lg"
           onClick={() => setLimit((limit) => limit + 3)}
         >
           Load more - {modules.length - limit} videos hidden

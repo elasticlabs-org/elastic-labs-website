@@ -1,7 +1,8 @@
 import React from 'react'
 import { AnimatedBackground } from '@/components/AnimatedBackground'
+import LearnMoreSection from '@/components/LearnMoreSection'
 
-export default function PolkadotMainPage() {
+export default function ElasticMainPage() {
   return (
     <React.Fragment>
       <AnimatedBackground />
@@ -39,10 +40,14 @@ export default function PolkadotMainPage() {
               </div>
             </div>
             <div>
-              <img src="/static/images/elastic/3d-graphic-1.png" width={550} />
+              <img src="/static/images/elastic/3d-graphic-2.png" width={550} />
             </div>
           </div>
         </div>
+      </section>
+      <br />
+      <section className="mt-10 flex flex-col items-center justify-center text-center">
+        <LearnMoreSection />
       </section>
       <br />
     </React.Fragment>

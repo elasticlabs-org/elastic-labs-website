@@ -4,28 +4,24 @@ export default function LearnMoreSection() {
   return (
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
       <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-        <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-3xl md:leading-14">
-          Learn more about us
+        <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-white dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-3xl md:leading-14">
+          Discover our services
         </h1>
         <div className="lg:flex lg:justify-evenly">
           {[
             {
-              title: 'Community Handbook',
-              description: 'Find all information about OpenGuild community in the handbook',
-              img: '/static/images/community_handbook.jpg',
+              title: 'Brand Agency',
+              description:
+                'Specialize in Web3-native brand building designed for on-chain ecosystems',
+              img: '/static/images/elastic/brand-agency.jpeg',
               href: 'https://handbook.openguild.wtf',
             },
             {
-              title: 'Join our Activities',
-              description: 'Participate in community activities to learn and earn rewards',
-              img: '/static/images/discussion_forum.jpg',
+              title: 'Developer Activation',
+              description:
+                'Supercharge Web3 ecosystems by onboarding and activating developers through tailored programs, grants, and educational initiatives.',
+              img: '/static/images/elastic/developer.jpg',
               href: '/activity',
-            },
-            {
-              title: 'Become a Member',
-              description: 'Discover talented people in the community',
-              img: '/static/images/members.jpg',
-              href: 'https://handbook.openguild.wtf/general-information/membership',
             },
           ].map((topic) => (
             <Link
@@ -35,19 +31,19 @@ export default function LearnMoreSection() {
                 minWidth: 350,
                 borderRadius: 20,
               }}
-              className="mx-3 my-5 max-w-lg overflow-hidden bg-white shadow-lg"
+              className="mx-3 my-5 w-full overflow-hidden border border-gray-800 bg-black shadow-xl"
             >
               <div
                 style={{
                   background: `url(${topic.img})`,
                   marginBottom: 5,
-                  height: 170,
+                  height: 300,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
               />
-              <div className="px-6 py-4">
-                <div className="mb-2 text-xl font-bold">{topic.title}</div>
+              <div className=" px-6 py-4 text-left">
+                <div className="mb-2 text-xl font-bold text-white">{topic.title}</div>
                 <p className="text-base text-gray-500">{topic.description}</p>
               </div>
             </Link>

@@ -1,6 +1,6 @@
 import './globals.css'
-import PolkadotMainPage from './polkadot/page'
+import ElasticMainPage from './elastic/page'
 
 export default async function Page() {
-  return <PolkadotMainPage />
+  return <ElasticMainPage />
 }

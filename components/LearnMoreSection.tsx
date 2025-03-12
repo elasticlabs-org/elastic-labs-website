@@ -13,14 +13,14 @@ export default function LearnMoreSection() {
               title: 'Brand Agency',
               description:
                 'Specialize in Web3-native brand building designed for on-chain ecosystems',
-              img: '/static/images/elastic/brand-agency.jpeg',
+              img: '/static/images/elastic/brand-agency-banner.jpg',
               href: 'https://handbook.openguild.wtf',
             },
             {
               title: 'Developer Activation',
               description:
                 'Supercharge Web3 ecosystems by onboarding and activating developers through tailored programs, grants, and educational initiatives.',
-              img: '/static/images/elastic/developer.jpg',
+              img: '/static/images/elastic/developer-activation-banner.jpg',
               href: '/activity',
             },
           ].map((topic) => (
@@ -31,20 +31,25 @@ export default function LearnMoreSection() {
                 minWidth: 350,
                 borderRadius: 20,
               }}
-              className="mx-3 my-5 w-full overflow-hidden border border-gray-800 bg-black shadow-xl"
+              className="mx-3 my-5 w-full overflow-hidden bg-black px-3 py-3 shadow-md shadow-purple-300/50"
             >
               <div
+                className="shadow-xl shadow-gray-800/50"
                 style={{
-                  background: `url(${topic.img})`,
-                  marginBottom: 5,
-                  height: 300,
+                  background: `linear-gradient(
+                    rgba(0, 0, 0, 0.7), 
+                    rgba(0, 0, 0, 0.7)
+                  ), url(${topic.img})`,
+                  height: 200,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
+                  borderRadius: 20,
                 }}
-              />
-              <div className=" px-6 py-4 text-left">
-                <div className="mb-2 text-xl font-bold text-white">{topic.title}</div>
-                <p className="text-base text-gray-500">{topic.description}</p>
+              >
+                <div className="px-6 py-4 text-left">
+                  <div className="mb-2 text-xl font-bold text-white">{topic.title}</div>
+                  <p className="text-base text-gray-300">{topic.description}</p>
+                </div>
               </div>
             </Link>
           ))}

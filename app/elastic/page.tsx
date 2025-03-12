@@ -30,7 +30,7 @@ export default function ElasticMainPage() {
                 <a
                   href="https://linktr.ee/OpenGuild"
                   style={{ maxWidth: 450 }}
-                  className="mx-auto my-5 rounded-lg bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 px-10 py-2.5 text-center text-xl font-medium text-white shadow-lg shadow-purple-500/50 hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-purple-300 dark:shadow-lg dark:shadow-purple-800/80 dark:focus:ring-purple-800"
+                  className="border-white-200 mx-auto my-5 rounded-3xl border bg-gradient-to-r px-10 py-2.5 text-center text-xl font-medium text-white shadow-lg shadow-purple-500/50 hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-purple-300 dark:shadow-lg dark:shadow-purple-800/80 dark:focus:ring-purple-800"
                 >
                   <span>Get our services</span>
                 </a>

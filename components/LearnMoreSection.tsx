@@ -31,10 +31,9 @@ export default function LearnMoreSection() {
                 minWidth: 350,
                 borderRadius: 20,
               }}
-              className="mx-3 my-5 w-full overflow-hidden bg-black px-3 py-3 shadow-md shadow-purple-300/50"
+              className="mx-3 my-5 w-full overflow-hidden bg-black px-3 py-3 shadow-md shadow-gray-600/50 hover:shadow-blue-500"
             >
               <div
-                className="shadow-xl shadow-gray-800/50"
                 style={{
                   background: `linear-gradient(
                     rgba(0, 0, 0, 0.7), 

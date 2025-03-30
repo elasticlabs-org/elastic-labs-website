@@ -1,8 +1,6 @@
 import React from 'react'
 
-type Props = {}
-
-const HeaderSection = (props: Props) => {
+const HeaderSection = () => {
   return (
     <section className="body-font min-h-80vh text-white">
       <div className="container mx-auto px-0 pt-20 md:px-5 lg:px-1 lg:py-5">

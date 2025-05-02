@@ -9,36 +9,18 @@ const siteMetadata = {
     'Elastic Labs helps blockchain ecosystems, startups, and enterprises scale their Web3 presence through strategic marketing, developer activation, and innovative dApps development.',
   blogSectionDescription:
     'Read our latest research & blog posts to learn more about what are we building',
-  focusTopics: [
-    {
-      title: 'Blockchain',
-      description:
-        'To catch up with the latest development in distributed system, blockchain is in our priority R&D queue. There are thousands of smart contract tutorial development out there, but only a tiny number of tutorials for blockchain engineering.',
-    },
-    {
-      title: 'Reverse Engineering',
-      description:
-        'We break down and implement retro gaming consoles like Nintendo Switch and Nintendo Entertainment System (NES) experimetally to deep dive into the architecture of its subtle system',
-    },
-    {
-      title: 'Embedded Programming',
-      description:
-        'We break down and implement retro gaming consoles like Nintendo Switch and Nintendo Entertainment System (NES) experimetally to deep dive into the architecture of its subtle system',
-    },
-  ],
   language: 'en-us',
   theme: 'white', // system, dark or light
-  siteUrl: 'https://openguild.wtf',
-  siteRepo: 'https://github.com/openguild-labs/openguild',
-  siteLogo: '/static/images/logo.png',
-  socialBanner: '/static/images/polkadot/jumbotron/OG_new_branding.webp',
+  siteUrl: 'https://elasticlabs.org',
+  siteRepo: 'https://github.com/elasticlabs-org/elasticlabs',
+  siteLogo: '/static/images/elastic/logo/elastic-labs.png',
+  socialBanner: '/static/images/elastic/elastic-labs-banner.png',
   // mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'openguildteam@gmail.com',
-  github: 'https://github.com/openguild-labs',
-  twitter: 'https://twitter.com/openguildwtf',
+  email: 'elasticlabs@gmail.com',
+  github: 'https://github.com/elasticlabs-org',
+  twitter: 'https://twitter.com/elasticlabs_org',
   facebook: 'https://www.facebook.com/groups/1202788154012237',
-  youtube: 'https://www.youtube.com/@openguildwtf',
-  linkedin: 'https://drive.google.com/file/d/1ZFcJFMT2CG2Ga_zdZmxF1yx6LWYSRmGz/view?usp=drive_link',
+  youtube: 'https://www.youtube.com/@elasticlabs_org',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
@@ -73,7 +55,7 @@ const siteMetadata = {
     giscusConfig: {
       // Visit the link below, and follow the steps in the 'configuration' section
       // https://giscus.app/
-      repo: 'openguild-labs/openguild' || process.env.NEXT_PUBLIC_GISCUS_REPO,
+      repo: 'elasticlabs-org/elasticlabs' || process.env.NEXT_PUBLIC_GISCUS_REPO,
       repositoryId: 'R_kgDOKvyTuw' || process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID,
       category: 'General' || process.env.NEXT_PUBLIC_GISCUS_CATEGORY,
       categoryId: 'DIC_kwDOKvyTu84CbHL8' || process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID,

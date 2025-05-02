@@ -23,7 +23,7 @@ const HeaderSection = () => {
             </p>
             <div className="mt-10">
               <a
-                href="https://linktr.ee/OpenGuild"
+                href="mailto:elasticlabs@gmail.com"
                 style={{ maxWidth: 450 }}
                 className="border-white-200 mx-auto my-5 rounded-3xl border bg-gradient-to-r px-10 py-2.5 text-center text-xl font-medium text-white shadow-lg shadow-blue-500/50 hover:bg-blue-900 hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:shadow-lg dark:shadow-blue-800/80 dark:focus:ring-blue-800"
               >

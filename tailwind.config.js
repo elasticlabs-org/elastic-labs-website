@@ -24,6 +24,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-space-grotesk)', ...fontFamily.sans],
+        akira: ['Akira', 'sans-serif'],
+        malinton: ['Malinton', 'sans-serif'],
+        utm: ['UTM-Avo', 'sans-serif'],
       },
       colors: {
         primary: colors.pink,

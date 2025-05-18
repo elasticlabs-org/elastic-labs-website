@@ -15,7 +15,7 @@ const Header = () => {
             <div className="mr-3">
               <img
                 src="/static/images/elastic/logo/elastic-labs.png"
-                width={120}
+                width={150}
                 alt="Elastic Labs"
               />
             </div>

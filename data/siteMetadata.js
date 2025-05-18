@@ -13,8 +13,8 @@ const siteMetadata = {
   theme: 'white', // system, dark or light
   siteUrl: 'https://elasticlabs.org',
   siteRepo: 'https://github.com/elasticlabs-org/elasticlabs',
-  siteLogo: '/static/images/elastic/logo/elastic-labs.png',
-  socialBanner: '/static/images/elastic/elastic-labs-banner.png',
+  siteLogo: '/logo/White_ShortLogo.png',
+  socialBanner: '/logo/White_FullLogo.png',
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'elasticlabs@gmail.com',
   github: 'https://github.com/elasticlabs-org',

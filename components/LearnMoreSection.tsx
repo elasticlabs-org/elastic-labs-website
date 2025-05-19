@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import SectionContainer from './SectionContainer'
 
 const SERVICES = [
   {
@@ -31,12 +32,12 @@ const BRAND_AGENCY_SERVICES = [
   {
     title: 'Community Growth & Engagement',
     description:
-      'We cultivate thriving ecosystems by executing targeted community strategies that boost adoption, foster engagement, and drive sustainable organic growth across key Web3 channels.',
+      'Build a passionate community that amplifies your brand. We create strategies to drive awareness, foster loyalty, and turn users into advocates for your tech products.',
   },
   {
-    title: 'Creative Branding & Market Differentiation',
+    title: 'Powerful Content Creation & Distribution',
     description:
-      'From concept to execution, we craft bold, innovative campaigns that enhance brand visibility, establish authority, and create a unique identity in the competitive Web3 landscape.',
+      'Capture your audience with compelling narratives. We craft stories for your brand and distribute them through our KOL networks, maximizing reach and influence in the tech industry.',
   },
   {
     title: 'Go-to-Market & Strategic Positioning',
@@ -47,24 +48,24 @@ const BRAND_AGENCY_SERVICES = [
 
 const DEVELOPER_ACTIVATION_SERVICES = [
   {
-    title: 'Establish the Root',
+    title: 'Comprehensive Technical Documentation',
     description:
-      'Identify your unique value proposition, attract high-quality developers, and position your technology as essential in Web3—resulting in a clear roadmap to credibility and the right builders.',
+      'Unlock rapid developer adoption with detailed, user-friendly documentation for your tech tools (e.g., APIs, SDKs), designed to streamline integration and accelerate growth.',
   },
   {
-    title: 'Educating & Onboarding Developers',
+    title: 'Engaging Technical Content Generation',
     description:
-      'Deliver tailored educational experiences that go beyond expectations, providing the knowledge and tools developers need to seamlessly integrate into your ecosystem.',
+      'Boost your brand’s visibility with educational content tailored for developers. We promote your tools across your social platforms, positioning you as a leader in the tech space.',
   },
   {
-    title: 'Community Activation & Engagement',
+    title: 'On-going developer support',
     description:
-      'Expand reach by connecting with top developer communities, launching targeted adoption campaigns, and streamlining onboarding for seamless developer engagement. ',
+      'Seamlessly support your developer community with our expert guidance. We act as an extension of your team, ensuring smooth adoption and long-term engagement with your tools.',
   },
   {
-    title: 'Enabling Creativity & Innovation',
+    title: 'Developer Campaign Design & Execution',
     description:
-      'Empower developers through collaboration, grants, and hackathons while providing direct support to overcome technical challenges',
+      'Drive measurable adoption with custom campaigns. We design and execute initiatives to connect with developer communities, fueling engagement and growth for your tech solutions.',
   },
 ]
 
@@ -91,6 +92,61 @@ const PRODUCT_DEVELOPMENT_SERVICES = [
   },
 ]
 
+export const ServiceFeatures = ({
+  title,
+  description,
+  services,
+  image,
+}: {
+  title: string
+  description: string
+  services: {
+    title: string
+    description: string
+  }[]
+  image: string
+}) => {
+  return (
+    <div className="flex min-h-[500px] w-full flex-wrap overflow-hidden rounded-xl py-[50px]">
+      <div
+        className="h-relative mr-[30px] min-h-[400px] w-full lg:w-[35%]"
+        style={{
+          background: `url(/images/${image})`,
+          backgroundSize: '80%',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        }}
+      ></div>
+      <div className="flex w-full flex-col text-left md:w-[60%]">
+        <h1 className="mb-2 font-akira text-[2rem] font-bold tracking-tighter md:text-[3rem] lg:text-[3rem]">
+          {title}
+        </h1>
+        <h1 className="mb-2 font-malinton text-[1rem] font-normal tracking-tighter text-gray-300 sm:text-[1rem] md:text-[1rem] lg:text-[1.5rem]">
+          {description}
+        </h1>
+        <div className="mt-5 flex flex-col lg:justify-evenly">
+          {services.map((service) => (
+            <div
+              key={service.title}
+              style={{
+                minWidth: 350,
+                borderWidth: 0.5,
+                borderColor: 'white',
+              }}
+              className="mx-3 my-1 w-full overflow-hidden bg-black px-1 py-2"
+            >
+              <div className="px-6 py-4 text-left">
+                <div className="mb-2 font-akira text-xl font-bold text-white">{service.title}</div>
+                <p className="text-base text-gray-300">{service.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function LearnMoreSection() {
   const [service, setService] = useState<
     'BRAND_AGENCY' | 'DEVELOPER_ACTIVATION' | 'PRODUCT_DEVELOPMENT'
@@ -98,42 +154,44 @@ export default function LearnMoreSection() {
   return (
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
       <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-        <h1 className="font-akira text-4xl font-extrabold leading-9 tracking-tight text-white dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-4xl md:leading-14">
-          Discover Our Services
-        </h1>
-        <div className="lg:flex lg:justify-evenly">
-          {SERVICES.map((service) => (
-            <div
-              key={service.title}
-              onClick={() => setService(service.key as any)}
-              style={{
-                minWidth: 350,
-                borderRadius: 20,
-              }}
-              className="mx-3 my-5 w-full cursor-pointer overflow-hidden bg-black px-3 py-3 shadow-md shadow-gray-600/50 transition-colors hover:bg-gray-900"
-            >
+        <SectionContainer>
+          <h1 className="font-akira text-[2rem] font-bold font-extrabold leading-9 tracking-tight tracking-tighter text-white dark:text-gray-100 sm:text-[2rem] sm:leading-10 md:text-[3.2rem] md:leading-14 lg:text-[3.2rem]">
+            Discover Our Services
+          </h1>
+          <div className="lg:flex lg:justify-evenly">
+            {SERVICES.map((service) => (
               <div
+                key={service.title}
+                onClick={() => setService(service.key as any)}
                 style={{
-                  background: `linear-gradient(
+                  minWidth: 350,
+                  borderRadius: 20,
+                }}
+                className="mx-3 my-5 w-full cursor-pointer overflow-hidden bg-black px-3 py-3 shadow-md shadow-gray-600/50 transition-colors hover:bg-gray-900"
+              >
+                <div
+                  style={{
+                    background: `linear-gradient(
                     rgba(0, 0, 0, 0.7), 
                     rgba(0, 0, 0, 0.7)
                   ), url(${service.img})`,
-                  height: 300,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  borderRadius: 20,
-                }}
-              >
-                <div className="flex h-full flex-col justify-center px-6 py-4 text-center">
-                  <div className="mb-2 font-akira text-2xl font-bold text-white">
-                    {service.title}
+                    height: 300,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    borderRadius: 20,
+                  }}
+                >
+                  <div className="flex h-full flex-col justify-center px-6 py-4 text-center">
+                    <div className="mb-2 font-akira text-2xl font-bold text-white">
+                      {service.title}
+                    </div>
+                    <p className="font-malinton text-base text-gray-300">{service.description}</p>
                   </div>
-                  <p className="font-malinton text-base text-gray-300">{service.description}</p>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </SectionContainer>
         <br />
         <br />
         <section
@@ -145,129 +203,28 @@ export default function LearnMoreSection() {
           }}
         >
           {service === 'BRAND_AGENCY' && (
-            <div className="flex min-h-[500px] w-full flex-wrap overflow-hidden rounded-xl bg-black py-[50px]">
-              <div
-                className="h-relative mr-[30px] min-h-[300px] w-[35%]"
-                style={{
-                  background: `url(/images/3D_Illustration1.png)`,
-                  backgroundSize: '80%',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center',
-                }}
-              ></div>
-              <div className="flex w-[60%] flex-col text-left">
-                <h1 className="mb-2 font-akira text-3xl font-bold tracking-tighter md:text-4xl lg:text-4xl">
-                  BRAND AGENCY
-                </h1>
-                <h1 className="mb-2 font-malinton text-xl font-normal tracking-tighter text-gray-300 md:text-2xl lg:text-xl">
-                  Specialize in Web3-native brand building designed for on-chain ecosystems
-                </h1>
-                <div className="mt-5 flex flex-col lg:justify-evenly">
-                  {BRAND_AGENCY_SERVICES.map((service) => (
-                    <div
-                      key={service.title}
-                      style={{
-                        minWidth: 350,
-                        borderWidth: 0.5,
-                        borderColor: 'white',
-                      }}
-                      className="mx-3 my-1 w-full overflow-hidden bg-black px-1 py-2"
-                    >
-                      <div className="px-6 py-4 text-left">
-                        <div className="mb-2 font-akira text-xl font-bold text-white">
-                          {service.title}
-                        </div>
-                        <p className="text-base text-gray-300">{service.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <ServiceFeatures
+              title="BRAND AGENCY"
+              description="Specialize in brand building designed for on-chain ecosystems and consumer apps"
+              services={BRAND_AGENCY_SERVICES}
+              image="3D_Illustration1.png"
+            />
           )}
           {service === 'DEVELOPER_ACTIVATION' && (
-            <div className="flex min-h-[500px] w-full flex-wrap overflow-hidden rounded-xl bg-black py-[50px]">
-              <div
-                className="h-relative mr-[30px] min-h-[300px] w-[35%]"
-                style={{
-                  background: `url(/images/3D_Illustration2.png)`,
-                  backgroundSize: '80%',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center',
-                }}
-              ></div>
-              <div className="flex w-[60%] flex-col text-left">
-                <h1 className="mb-2 font-akira text-3xl font-bold tracking-tighter md:text-4xl lg:text-4xl">
-                  DEVELOPER ACTIVATION
-                </h1>
-                <h1 className="mb-2 font-malinton text-xl font-normal tracking-tighter text-gray-300 md:text-2xl lg:text-xl">
-                  Specialize in Web3-native brand building designed for on-chain ecosystems
-                </h1>
-                <div className="mt-5 flex flex-col lg:justify-evenly">
-                  {DEVELOPER_ACTIVATION_SERVICES.map((service) => (
-                    <div
-                      key={service.title}
-                      style={{
-                        minWidth: 350,
-                        borderWidth: 0.5,
-                        borderColor: 'white',
-                      }}
-                      className="mx-3 my-1 w-full overflow-hidden bg-black px-1 py-2"
-                    >
-                      <div className="px-6 py-4 text-left">
-                        <div className="mb-2 font-akira text-xl font-bold text-white">
-                          {service.title}
-                        </div>
-                        <p className="text-base text-gray-300">{service.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <ServiceFeatures
+              title="DEVELOPER ACTIVATION"
+              description="Supercharge Web3 ecosystems by onboarding and activating developers through tailored programs, grants, and educational initiatives."
+              services={DEVELOPER_ACTIVATION_SERVICES}
+              image="3D_Illustration2.png"
+            />
           )}
           {service === 'PRODUCT_DEVELOPMENT' && (
-            <div className="flex min-h-[500px] w-full flex-wrap overflow-hidden rounded-xl bg-black py-[50px]">
-              <div
-                className="h-relative mr-[30px] min-h-[300px] w-[35%]"
-                style={{
-                  background: `url(/images/3D_Illustration3.png)`,
-                  backgroundSize: '80%',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center',
-                }}
-              ></div>
-              <div className="flex w-[60%] flex-col text-left">
-                <h1 className="mb-2 font-akira text-3xl font-bold tracking-tighter md:text-4xl lg:text-4xl">
-                  PRODUCT DEVELOPMENT
-                </h1>
-                <h1 className="mb-2 font-malinton text-xl font-normal tracking-tighter text-gray-300 md:text-2xl lg:text-xl">
-                  Specialize in Web3-native brand building designed for on-chain ecosystems
-                </h1>
-                <div className="mt-5 flex flex-col lg:justify-evenly">
-                  {PRODUCT_DEVELOPMENT_SERVICES.map((service) => (
-                    <div
-                      key={service.title}
-                      style={{
-                        minWidth: 350,
-                        borderWidth: 0.5,
-                        borderColor: 'white',
-                      }}
-                      className="mx-3 my-1 w-full overflow-hidden bg-black px-1 py-2"
-                    >
-                      <div className="px-6 py-4 text-left">
-                        <div className="mb-2 font-akira text-xl font-bold text-white">
-                          {service.title}
-                        </div>
-                        <p className="font-malinton text-base text-gray-300">
-                          {service.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <ServiceFeatures
+              title="PRODUCT DEVELOPMENT"
+              description="Experienced working with blockchain technology and developing software in the open-source environment."
+              services={PRODUCT_DEVELOPMENT_SERVICES}
+              image="3D_Illustration3.png"
+            />
           )}
         </section>
         <br />

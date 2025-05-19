@@ -8,7 +8,7 @@ const ServiceSection = () => {
           <source src="/videos/lower-background.mp4" type="video/mp4" />
         </video>
         {/* Dark overlay to improve text readability */}
-        <div className="absolute inset-0 bg-black bg-opacity-80"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       </div>
       <div className="flex max-w-[900px] flex-col items-center justify-between gap-[30px] overflow-hidden rounded-xl bg-black bg-opacity-60 px-[80px] py-[50px] shadow-2xl md:flex-row">
         <div className="mb-2 w-full text-left md:max-w-[900px]">

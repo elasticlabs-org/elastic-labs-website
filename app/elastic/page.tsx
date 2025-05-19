@@ -18,10 +18,10 @@ export default function ElasticMainPage() {
         </div>
         <HeaderSection />
         <br />
-        <section className="mt-10 flex flex-col items-center justify-center text-center">
-          <LearnMoreSection />
-        </section>
       </SectionContainer>
+      <section className="mt-10 flex flex-col items-center justify-center text-center">
+        <LearnMoreSection />
+      </section>
       <ServiceSection />
       <br />
     </React.Fragment>

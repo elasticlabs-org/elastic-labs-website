@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Elastic Labs Landing Page
 
-## Getting Started
+A modern, high-performance landing page for Elastic Labs - a premier marketing and developer relations agency driving AI x Crypto innovation.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Modern Tech Stack**: Built with Next.js 14+, TypeScript, and Tailwind CSS
+- **Smooth Animations**: Framer Motion for engaging user experiences
+- **Responsive Design**: Mobile-first approach ensuring great UX across all devices
+- **SEO Optimized**: Complete metadata, Open Graph, and sitemap configuration
+- **Base.org Inspired**: Bold typography, animated gradients, and clean aesthetics
+
+## 📦 Project Structure
+
+```
+elastic-labs/
+├── app/                      # Next.js App Router
+│   ├── page.tsx             # Landing page
+│   ├── elastichub/          # Elastic Hub portal
+│   ├── glossary/            # AI x Crypto glossary
+│   ├── layout.tsx           # Root layout with SEO
+│   └── globals.css          # Global styles & animations
+├── components/              # React components
+│   ├── Hero.tsx            # Hero section with gradient
+│   ├── Services.tsx        # Services showcase
+│   ├── AppsShowcase.tsx    # Polkadot Agent Kit
+│   ├── AIxCrypto.tsx       # AI x Crypto section
+│   ├── Footer.tsx          # Footer component
+│   └── Navbar.tsx          # Navigation bar
+└── public/                 # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18+ 
+- npm or yarn
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Install dependencies
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Run development server
+npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Build for production
+npm run build
 
-## Deploy on Vercel
+# Start production server
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Design System
+
+### Colors
+- **Primary**: `#0052ff` - Bold blue
+- **Secondary**: `#6366f1` - Indigo
+- **Accent**: `#8b5cf6` - Purple
+
+### Typography
+- **Headings**: Geist Sans (bold, large scale)
+- **Body**: Geist Sans (regular)
+- **Code**: Geist Mono
+
+### Animations
+- Gradient backgrounds (8s cycle)
+- Smooth scroll reveals
+- Hover effects and transitions
+- Framer Motion page transitions
+
+## 📄 Pages
+
+### Landing Page (`/`)
+- Hero section with animated gradient
+- Services grid (Brand Agency, Developer Activation, Product Development)
+- Apps showcase featuring Polkadot Agent Kit
+- AI x Crypto focus section
+- Contact CTA
+
+### Elastic Hub (`/elastichub`)
+- Newsletter portal linking to Substack
+- Topics overview
+- Subscription CTA
+
+### Glossary (`/glossary`)
+- AI x Crypto terminology
+- Search and filter functionality
+- Alphabetical navigation
+- Category-based organization
+
+## 🌏 Market Focus
+
+Southeast Asia & Broader Asia Market
+
+## 🔗 Key Links
+
+- **Website**: [elasticlabs.org](https://elasticlabs.org)
+- **Elastic Hub**: [elastichub.org](https://elastichub.org)
+- **GitHub**: [github.com/elasticlabs-org](https://github.com/elasticlabs-org)
+- **Polkadot Agent Kit**: [github.com/elasticlabs-org/polkadot-agent-kit](https://github.com/elasticlabs-org/polkadot-agent-kit)
+
+## 📝 Content Strategy
+
+**Focus**: AI x Crypto Innovation
+
+**Key Messages**:
+- "Grow Your On-Chain Ecosystem"
+- "AI x Crypto Innovation"
+- "Marketing, Developer Activation, & Venture Building for the Future of Decentralization"
+
+## 🤝 Contributing
+
+This is a private project for Elastic Labs. For inquiries, please contact the team.
+
+## 📧 Contact
+
+- Email: contact@elasticlabs.org
+- GitHub: [@elasticlabs-org](https://github.com/elasticlabs-org)
+- Twitter: [@elasticlabs](https://twitter.com/elasticlabs)
+
+---
+
+Built with ❤️ by Elastic Labs

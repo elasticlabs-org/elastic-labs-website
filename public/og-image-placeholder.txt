@@ -1,0 +1,16 @@
+OG Image Placeholder
+
+Please replace this with an actual og-image.png file (1200x630px) featuring:
+- Elastic Labs logo
+- "AI x Crypto Innovation" tagline
+- Gradient background (primary colors: #0052ff, #6366f1, #8b5cf6)
+- Clean, bold typography
+
+You can create this using tools like:
+- Figma
+- Canva
+- Adobe Photoshop/Illustrator
+- Or any online OG image generator
+
+Save as: og-image.png in the /public directory
+

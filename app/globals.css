@@ -1,26 +1,220 @@
 @import "tailwindcss";
 
+/* Custom Font Declarations */
+@font-face {
+  font-family: "Akira";
+  src: url("/font/AKIRA EXPANDED DEMO.OTF") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Malinton";
+  src: url("/font/MALINTONTRIALVERSION-THIN-BF672ACCC4BA602.OTF")
+    format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Malinton";
+  src: url("/font/MALINTONTRIALVERSION-LIGHT-BF672ACCC490F40.OTF")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Malinton";
+  src: url("/font/MALINTONTRIALVERSION-REGULAR-BF672ACCC4A43EA.OTF")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Malinton";
+  src: url("/font/MALINTONTRIALVERSION-MEDIUM-BF672ACCC49BFB7.OTF")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Malinton";
+  src: url("/font/MALINTONTRIALVERSION-SEMIBOLD-BF672ACCC4B3224.OTF")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Malinton";
+  src: url("/font/MALINTONTRIALVERSION-BOLD-BF672ACCC4407AD.OTF")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Malinton";
+  src: url("/font/MALINTONTRIALVERSION-BLACK-BF672ACCC40A7C9.OTF")
+    format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "UTM-Avo";
+  src: url("/font/UTM-AVO.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "UTM-Avo";
+  src: url("/font/UTM-AVO-ITALIC.TTF") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "UTM-Avo";
+  src: url("/font/UTM-AVOBOLD.TTF") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0a0a0a;
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --secondary: #60a5fa;
+  --accent: #93c5fd;
+  --muted: #f3f4f6;
+  --border: #e5e7eb;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  /* Custom Font Families */
+  --font-akira: "Akira", sans-serif;
+  --font-malinton: "Malinton", sans-serif;
+  --font-utm: "UTM-Avo", sans-serif;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Custom animations */
+  --animate-gradient: gradient 8s ease infinite;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-fade-in: fadeIn 0.5s ease-out;
+  --animate-slide-up: slideUp 0.5s ease-out;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: #60a5fa;
+    --primary-dark: #3b82f6;
+    --muted: #1f2937;
+    --border: #374151;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Custom animations */
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary),
+    var(--accent)
+  );
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary),
+    var(--accent)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
 }

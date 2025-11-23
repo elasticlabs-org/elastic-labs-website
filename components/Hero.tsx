@@ -11,7 +11,7 @@ export function Hero() {
       <div className="absolute inset-0 gradient-primary opacity-10"></div>
 
       {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]"></div>
 
       {/* Account for sidebar on desktop */}
       <div className="relative z-10 w-full lg:pl-[200px] px-4 sm:px-6 lg:px-12 py-32">
@@ -42,7 +42,7 @@ export function Hero() {
               style={{ fontFamily: "Malinton, sans-serif" }}
             >
               GROW YOUR <br />
-              <span className="gradient-text">ON-CHAIN ECOSYSTEM</span>
+              <span>ON-CHAIN ECOSYSTEM</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -95,23 +95,47 @@ export function Hero() {
               transition={{ delay: 1.1, duration: 0.8 }}
               className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto"
             >
-              <div className="p-6 rounded-2xl bg-muted/50 backdrop-blur-sm">
-                <div className="text-3xl font-bold gradient-text mb-2">
-                  AI-Powered
+              <div className="p-6 rounded-2xl bg-muted/50 backdrop-blur-sm border border-border/50 hover:border-primary/50 transition-all">
+                <div
+                  className="text-3xl font-bold gradient-text mb-2"
+                  style={{ fontFamily: "Akira, sans-serif" }}
+                >
+                  AI AGENTS
                 </div>
-                <div className="text-muted-foreground">Agent Development</div>
+                <div
+                  className="text-muted-foreground"
+                  style={{ fontFamily: "Malinton, sans-serif" }}
+                >
+                  Autonomous systems driving on-chain innovation
+                </div>
               </div>
-              <div className="p-6 rounded-2xl bg-muted/50 backdrop-blur-sm">
-                <div className="text-3xl font-bold gradient-text mb-2">
-                  Web3-Native
+              <div className="p-6 rounded-2xl bg-muted/50 backdrop-blur-sm border border-border/50 hover:border-primary/50 transition-all">
+                <div
+                  className="text-3xl font-bold gradient-text mb-2"
+                  style={{ fontFamily: "Akira, sans-serif" }}
+                >
+                  DEVELOPER FIRST
                 </div>
-                <div className="text-muted-foreground">Brand Building</div>
+                <div
+                  className="text-muted-foreground"
+                  style={{ fontFamily: "Malinton, sans-serif" }}
+                >
+                  Seamless activation & cutting-edge tooling
+                </div>
               </div>
-              <div className="p-6 rounded-2xl bg-muted/50 backdrop-blur-sm">
-                <div className="text-3xl font-bold gradient-text mb-2">
-                  Full-Stack
+              <div className="p-6 rounded-2xl bg-muted/50 backdrop-blur-sm border border-border/50 hover:border-primary/50 transition-all">
+                <div
+                  className="text-3xl font-bold gradient-text mb-2"
+                  style={{ fontFamily: "Akira, sans-serif" }}
+                >
+                  CRYPTO NATIVE
                 </div>
-                <div className="text-muted-foreground">Ecosystem Growth</div>
+                <div
+                  className="text-muted-foreground"
+                  style={{ fontFamily: "Malinton, sans-serif" }}
+                >
+                  Strategic marketing for decentralized future
+                </div>
               </div>
             </motion.div>
           </motion.div>

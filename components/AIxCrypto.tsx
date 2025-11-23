@@ -86,8 +86,25 @@ export function AIxCrypto() {
       </section>
 
       {/* Contact CTA Section */}
-      <section id="contact" className="py-32 bg-background">
-        <div className="w-full lg:pl-[200px]">
+      <section id="contact" className="relative py-32 overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 z-0">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+          >
+            <source src="/videos/lower-background.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/60 z-10"></div>
+        </div>
+
+        <div className="relative z-20 w-full lg:pl-[200px]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -99,13 +116,13 @@ export function AIxCrypto() {
               {/* Header */}
               <div className="space-y-6">
                 <h2
-                  className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight uppercase"
+                  className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight uppercase text-white"
                   style={{ fontFamily: "Akira, sans-serif" }}
                 >
                   Ready to <span className="gradient-text">Grow Together?</span>
                 </h2>
                 <p
-                  className="text-xl text-muted-foreground max-w-2xl mx-auto"
+                  className="text-xl text-gray-300 max-w-2xl mx-auto"
                   style={{ fontFamily: "Malinton, sans-serif" }}
                 >
                   Developers shape the future of crypto. We&apos;re here to
@@ -130,9 +147,9 @@ export function AIxCrypto() {
               </div>
 
               {/* Region */}
-              <p className="text-muted-foreground pt-8">
+              <p className="text-gray-300 pt-8">
                 🌏 Established market:{" "}
-                <span className="text-foreground font-semibold">
+                <span className="text-white font-semibold">
                   Southeast Asia & Broader Asia
                 </span>
               </p>
